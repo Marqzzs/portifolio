@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--inter-font)', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
         black: {
           DEFAULT: "#000",

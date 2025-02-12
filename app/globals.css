@@ -70,8 +70,12 @@
     * {
         @apply border-border !scroll-smooth;
     }
+    :root {
+        --inter-font: 'Inter', sans-serif;
+    }
     body {
         @apply bg-background text-foreground;
+        font-family: var(--inter-font), ui-sans-serif, system-ui, sans-serif;
     }
     button {
         @apply active:outline-none;

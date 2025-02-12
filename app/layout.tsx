@@ -4,8 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: "--inter-font",
+  subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
