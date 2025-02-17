@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono, Inter} from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
+import { Inter } from "next/font/google";
 
-const inter = Inter({
-  variable: "--inter-font",
-  subsets: ["latin", "cyrillic"],
-});
+import "./globals.css";
+import { ThemeProvider } from "./provider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mauricio Portfolio",
-  description: "Um portfolio moderno e minimalista",
+  title: "Adrian's Portfolio",
+  description: "Modern & Minimal JS Mastery Portfolio",
 };
 
 export default function RootLayout({
@@ -20,17 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-      <ThemeProvider
+      <head>
+        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+      </head>
+      <body className={inter.className}>
+        <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-      >
+        >
           {children}
-      </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
